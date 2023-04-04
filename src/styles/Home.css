@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+*{
+    font-family: 'Lato', arial, helvetica, sans-serif;
+}
+
+.homeContainer{
+    width: 100%;
+}
+
+.mainScren{
+    width: 100%;
+    height: auto;
+}
+
+
+.video-container {
+    margin: 0 0;
+    padding: 0 0;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+  }
+  
+  
+  @keyframes fade{
+    0% {
+      opacity: 0;
+    }
+    5%{
+        opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    95%{
+        opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  .video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 100px);
+    animation-name: fade;
+    animation-duration: 14.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    object-fit: cover;
+  }

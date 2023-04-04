@@ -69,6 +69,6 @@
   font-size: 1.5em;
 }
 
-.routeContainer {
-  margin-top: 20px;
+.navLinks li a:hover{
+  border-bottom: 1px solid white;
 }
