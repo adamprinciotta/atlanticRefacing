@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.headerImg {
+  border-radius: 5px;
+  max-width: 909px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #494031;
+  object-fit: none;
+  margin: 0 auto;
+  width: 75vw;
+}
+
+.navContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.navLinks {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: #494031;
+  height: 100px;
+}
+
+.navLinks ul{
+  width: 25vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.navLinks li {
+  display: flex;
+  flex-direction: row;
+  margin-right: 10px;
+}
+
+.navLinks li a {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.routeContainer {
+  margin-top: 20px;
+}
