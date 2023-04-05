@@ -45,6 +45,7 @@
   background-color: #494031;
   height: 100px;
   position: fixed; /* remove if don't want the position fixed to then change video sizes */
+  z-index: 100;
 }
 
 .navLinks ul{

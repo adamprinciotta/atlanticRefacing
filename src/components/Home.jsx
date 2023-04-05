@@ -7,7 +7,8 @@ import one from "../images/1.png";
 import two from "../images/2.png";
 import three from "../images/3.png";
 import four from "../images/4.png";
-import anniversary from '../images/anniversary.png'
+import five from "../images/5.png";
+import anniversary from "../images/anniversary.png";
 
 import { useState } from "react";
 
@@ -38,7 +39,6 @@ function Home() {
       </section>
       <section className="info">
         <div className="explained">
-
           <div className="topExplain">
             <h2>Kitchen Cabinet Refacing</h2>
             <hr></hr>
@@ -88,13 +88,116 @@ function Home() {
             (Owner, Installer)
           </h3>
           <h2>
-          Always fair and reasonable prices because I cut out sales commissions and subcontractor costs. This gives you the highest quality reface. "I will make it a painless process."
-          <br></br>
-          <br></br>
-          Contact David today for a free no pressure estimate.
+            Always fair and reasonable prices because I cut out sales
+            commissions and subcontractor costs. This gives you the highest
+            quality reface. "I will make it a painless process."
+            <br></br>
+            <br></br>
+            Contact David today for a free no pressure estimate.
           </h2>
           <div class="phoneNumber">781-221-0334</div>
-          <img src={anniversary} alt="38 Year Anniversary Photo"/>
+          <img src={anniversary} alt="38 Year Anniversary Photo" />
+        </div>
+      </section>
+      <section className="formAndStyles">
+        <div className="formDiv">
+          <h3>Request A Free Estimate Below</h3>
+          <form>
+            <input
+              type="text"
+              id="fullname"
+              name="fullname"
+              placeholder="Full name"
+              required
+            />
+
+            <input
+              type="text"
+              id="city"
+              name="city"
+              placeholder="City"
+              required
+            />
+
+            <input
+              type="text"
+              id="state"
+              name="state"
+              placeholder="State"
+              required
+            />
+
+            <input
+              type="tel"
+              id="homephone"
+              name="homephone"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              placeholder="Home Phone Number"
+              required
+            />
+
+            <input
+              type="tel"
+              id="cellphone"
+              name="cellphone"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              placeholder="Cell Phone Number"
+              required
+            />
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email Address"
+              required
+            />
+
+            <input className="submit" type="submit" value="Submit" />
+          </form>
+        </div>
+        <div className="qualification">
+          <h2 className="topHalf">
+            Save 50- 70% over full remodel
+            <br></br>
+            Average install 3-4 days 
+            <br></br>
+            David has refaced over 1500 kitchens
+          </h2>
+          <h2>David, the owner refaces all kitchens, HIMSELF</h2>
+          <h2 className="subContract">NO SUB-CONTRACTORS</h2>
+          <h2>Over 30,000 Cabinet Doors Installed</h2>
+        </div>
+        {/* <div className="qualificationImgContainer"> */}
+          <img src={five} alt="Kitchen" width="35%" height="80%"/> 
+        {/* </div> */}
+        <div className="stylesDiv">
+          <h4>
+            Available Door Styles
+          </h4>
+          <br></br>
+          <ul>
+            <li>Raised Panel Doors</li>
+            <li>Mitred Raised Panel</li>
+            <li>Shaker Style</li>
+          </ul>
+          <br></br>
+          <h4>
+            The Newest Trends
+          </h4>
+          <br></br>
+          <ul>
+            <li>Painted Doors</li>
+            <li>Painted Sand Thru</li>
+            <li>Painted Distressed</li>
+            <li>Glazed Doors</li>
+          </ul>
+          <br></br>
+          <h4>Countertops</h4>
+          <ul>
+            <li>Granite</li>
+            <li>Quartz</li>
+          </ul>
         </div>
       </section>
     </div>

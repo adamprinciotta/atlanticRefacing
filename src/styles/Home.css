@@ -254,3 +254,123 @@
   font-weight: bold;
   color: #CE2C2A;
 }
+
+.formAndStyles{
+  width: 100%;
+  
+  background-color: #1A1205;
+  display: flex;
+  flex-direction: row;
+}
+
+.formDiv{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+
+.formDiv h3{
+  width: 50%;
+  font-size: 14px;
+  background-color: #FFFF99;
+  border: 3px solid #669933;
+  height: auto;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.formDiv form{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20%;
+  padding-top: 10px;
+}
+
+.formDiv input{
+  padding: 10px;
+  padding-top: 10px;
+  margin-top: 10px;
+  background-color: #D1D0CD;
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  width: 100%;
+}
+
+.formDiv .submit{
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: black;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: black;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: black;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: black;
+}
+
+.qualification{
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 20%;
+  padding-right: 30px;
+}
+
+.qualification .topHalf{
+  color: rgb(255,255,204);
+  font-weight: normal;
+}
+
+.qualification .subContract{
+  color: #12BC29;
+}
+
+.stylesDiv{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: flex-start;
+  color: white;
+  margin: 0 auto;
+}
+
+.stylesDiv h4{
+  color: #FFFFCC;
+  font-size: 22px;
+  text-align: center;
+}
+
+.stylesDiv ul{
+  color: #FFFFCC;
+  font-size: 20px;
+  width: 100%;
+  list-style-type: disc;
+}
+
+.stylesDiv ul li{
+  color: #FFFFCC;
+  width: 80%;
+  overflow: hidden;
+  position: relative;
+  left: 20%;
+}
+
+/* .qualificationImgContainer{
+  display: flex;
+  align-items: center;
+} */
