@@ -154,6 +154,7 @@
   border-bottom: 5px solid #a30029;
   border-left: 0px;
   border-right: 0px;
+  font-weight: bold;
 }
 
 @keyframes buttonHover {
