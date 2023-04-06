@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Home.jsx";
-import About from "./components/About.jsx";
-import header from "./images/header.png";
+import Gallery1 from "./components/Gallery1.jsx";
+import header from "./images/fixedHeader.png";
 
 function App() {
   return (
@@ -20,14 +20,14 @@ function App() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/about">Gallery I</Link>
             </li>
           </ul>
         </nav>
         <div className="routeContainer">
           <Routes>
             <Route exact path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/about" element={<Gallery1 />} />
           </Routes>
         </div>
       </Router>

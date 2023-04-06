@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+* {
+  font-family: "Lato", arial, helvetica, sans-serif;
+}
+
+.container{
+  background-image: url('../images/moroccan-flower.png');
+  background: cover;
+}
+
+.gallery1Container {
+  width: 80%;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 125px;
+  flex-direction: column;
+}
+
+.formG1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: black;
+  align-items: center; /* add this line */
+  height: 80vh;
+}
+
+.formG1Div {
+  /* padding-bottom: 10px; */
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  justify-content: space-evenly;
+}
+
+.formG1Div h3 {
+  width: 50%;
+  font-size: 14px;
+  background-color: #ffff99;
+  border: 3px solid #669933;
+  height: auto;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.formG1Div form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20%;
+  padding-top: 10px;
+}
+
+.formG1Div input {
+  padding: 10px;
+  padding-top: 10px;
+  margin-top: 10px;
+  background-color: #d1d0cd;
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  width: 100%;
+}
+
+.formG1Div .submit {
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.formG1Div img {
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.introG1 {
+  width: 40%;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+/* .introG1 img{
+    max-width: 100%;
+    height: 50% !important;
+} */
+
+.introG1 h1 {
+  color: #12bc29;
+}
+
+.introG1 h5 {
+  color: white;
+  font-weight: normal;
+}
+
+.introImg {
+  height: 80%;
+}
+
+.imagesG1 img {
+  margin: 5px auto;
+  border-radius: 5px;
+  height: 75vh;
+  object-fit: cover;
+}
+
+
+
+/* .galleryItoIIBtn{
+  background-color: #cc0033;
+  width: 250px;
+  height: 75px;
+  font-size: 20px;
+  border-top: 5px solid #cccccc;
+  border-bottom: 5px solid #a30029;
+  border-left: 0px;
+  border-right: 0px;
+  font-weight: bold;
+}
+
+
+@keyframes buttonHover {
+  0% {
+    transform: translateY(1px);
+    border-top: 4px solid #cccccc;
+    border-bottom: 4px solid #a30029;
+  }
+  25% {
+    transform: translateY(1.5px);
+    border-top: 3px solid #cccccc;
+    border-bottom: 3px solid #a30029;
+  }
+  50% {
+    transform: translateY(2px);
+    border-top: 2px solid #cccccc;
+    border-bottom: 2px solid #a30029;
+  }
+  75% {
+    transform: translateY(2.5px);
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #a30029;
+  }
+  100% {
+    transform: translateY(3px);
+    border-top: 0;
+    border-bottom: 0;
+  }
+}
+
+@keyframes buttonReverse {
+  0% {
+    transform: translateY(3px);
+    border-top: 0;
+    border-bottom: 0;
+  }
+  25% {
+    transform: translateY(2.5px);
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #a30029;
+  }
+  50% {
+    transform: translateY(2px);
+    border-top: 2px solid #cccccc;
+    border-bottom: 2px solid #a30029;
+  }
+  75% {
+    transform: translateY(1.5px);
+    border-top: 3px solid #cccccc;
+    border-bottom: 3px solid #a30029;
+  }
+  100% {
+    transform: translateY(1px);
+    border-top: 4px solid #cccccc;
+    border-bottom: 4px solid #a30029;
+  }
+}
+
+.galleryItoIIBtn:hover {
+  cursor: pointer;
+  animation-name: buttonHover;
+  animation-duration: 0.05s;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+.galleryItoIIBtn:not(:hover) {
+  animation-name: buttonReverse;
+  animation-duration: 0.05s;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+
+.btnAndFooter{
+  width: 100%;
+  background-color: black;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+footer{
+  background-color: black;
+  position: relative;
+} */
+
+.galleryItoIIBtn {
+  background-color: #cc0033;
+  width: 250px;
+  height: 75px;
+  font-size: 20px;
+  border-top: 5px solid #cccccc;
+  border-bottom: 5px solid #a30029;
+  border-left: 0px;
+  border-right: 0px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes buttonHover {
+  0% {
+    transform: translateY(1px);
+    border-top: 4px solid #cccccc;
+    border-bottom: 4px solid #a30029;
+  }
+  25% {
+    transform: translateY(1.5px);
+    border-top: 3px solid #cccccc;
+    border-bottom: 3px solid #a30029;
+  }
+  50% {
+    transform: translateY(2px);
+    border-top: 2px solid #cccccc;
+    border-bottom: 2px solid #a30029;
+  }
+  75% {
+    transform: translateY(2.5px);
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #a30029;
+  }
+  100% {
+    transform: translateY(3px);
+    border-top: 0;
+    border-bottom: 0;
+  }
+}
+
+@keyframes buttonReverse {
+  0% {
+    transform: translateY(3px);
+    border-top: 0;
+    border-bottom: 0;
+  }
+  25% {
+    transform: translateY(2.5px);
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #a30029;
+  }
+  50% {
+    transform: translateY(2px);
+    border-top: 2px solid #cccccc;
+    border-bottom: 2px solid #a30029;
+  }
+  75% {
+    transform: translateY(1.5px);
+    border-top: 3px solid #cccccc;
+    border-bottom: 3px solid #a30029;
+  }
+  100% {
+    transform: translateY(1px);
+    border-top: 4px solid #cccccc;
+    border-bottom: 4px solid #a30029;
+  }
+}
+
+.galleryItoIIBtn:hover {
+  cursor: pointer;
+  animation-name: buttonHover;
+  animation-duration: 0.05s;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+.galleryItoIIBtn:not(:hover) {
+  animation-name: buttonReverse;
+  animation-duration: 0.05s;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+.btnAndFooter {
+  width: 100%;
+  background-color: black;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: black;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}

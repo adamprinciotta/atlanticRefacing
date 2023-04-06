@@ -1,5 +1,9 @@
-import "../styles/Home.css";
 import React from "react";
+import ImageGallery from "react-image-gallery";
+import "react-image-gallery/styles/css/image-gallery.css";
+
+import "../styles/Home.css";
+
 import video from "../images/kitchenVideo.mp4";
 // import video2 from "../images/kitchenVideo2.mp4";
 
@@ -14,6 +18,21 @@ import { useState } from "react";
 
 function Home() {
   const [isFirstVideo, setIsFirstVideo] = useState(true);
+
+  const images = [
+    {
+      original: one,
+      thumbnail: one,
+    },
+    {
+      original: two,
+      thumbnail: two,
+    },
+    {
+      original: three,
+      thumbnail: three,
+    },
+  ];
 
   return (
     <div className="homeContainer">
@@ -160,7 +179,7 @@ function Home() {
           <h2 className="topHalf">
             Save 50- 70% over full remodel
             <br></br>
-            Average install 3-4 days 
+            Average install 3-4 days
             <br></br>
             David has refaced over 1500 kitchens
           </h2>
@@ -169,12 +188,10 @@ function Home() {
           <h2>Over 30,000 Cabinet Doors Installed</h2>
         </div>
         {/* <div className="qualificationImgContainer"> */}
-          <img src={five} alt="Kitchen" width="35%" height="80%"/> 
+        <img src={five} alt="Kitchen" width="35%" height="80%" />
         {/* </div> */}
         <div className="stylesDiv">
-          <h4>
-            Available Door Styles
-          </h4>
+          <h4>Available Door Styles</h4>
           <br></br>
           <ul>
             <li>Raised Panel Doors</li>
@@ -182,9 +199,7 @@ function Home() {
             <li>Shaker Style</li>
           </ul>
           <br></br>
-          <h4>
-            The Newest Trends
-          </h4>
+          <h4>The Newest Trends</h4>
           <br></br>
           <ul>
             <li>Painted Doors</li>
@@ -199,6 +214,65 @@ function Home() {
             <li>Quartz</li>
           </ul>
         </div>
+      </section>
+      <section>
+        <div class="typesAndScroll">
+          <div className="refacingTypes">
+            <h1>Solid Wood Refacing</h1>
+            <div className="refacingLists">
+              <ul>
+                <li>Cherry</li>
+                <li>Birch</li>
+                <li>Oak</li>
+              </ul>
+              <ul>
+                <li>Shaker Doors</li>
+                <li>Mitred Shaker Doors</li>
+                <li>End Panel Doors</li>
+              </ul>
+            </div>
+          </div>
+          <div className="imageGalleryContainer">
+            {/* <ImageGallery
+              items={images}
+              showFullscreenButton={false}
+              showPlayButton={false}
+              showNav={false}
+              autoPlay={true}
+              /> */}
+            <ImageGallery
+              items={images}
+              showFullscreenButton={false}
+              showPlayButton={false}
+              showNav={false}
+              autoPlay={true}
+              slideInterval={5000}
+              slideDuration={1000}
+              showBullets={true}
+              showThumbnails={false}
+              renderItem={(item) => (
+                <div>
+                  <img src={item.original} alt={item.originalAlt} />
+                  {item.description && (
+                    <span className="image-gallery-description">
+                      {item.description}
+                    </span>
+                  )}
+                </div>
+              )}
+              className="my-image-gallery" // add your custom className here
+            />
+          </div>
+        </div>
+      </section>
+      <section>
+        <footer>
+          <h1>Burlington, MA - 781-221-0334 and Waltham, MA - 781-899-0118</h1>
+          <h1><i>No Subcontractors—Owner Refaces All Kitchens</i></h1>
+          <br></br>
+          <h4>Kitchen Cabinet Refacing</h4>
+          <p>Acton, Andover, Arlington, Ashland, Bedford, Belmont, Beverly, Billerica, Bolton, Boxford, Burlington, Canton, Carlisle, Chelmsford, Concord, Danvers, Essex, Everett, Framingham, Georgetown, Gloucester, Groton, Hamilton, Holliston, Hopkinton, Hudson, Ipswich, Lancaster, Leominster, Lexington, Lincoln, Littleton, Lynn, Lynnfield, Malden, Manchester by the Sea, Marlboro, Medford, Melrose, Methuen, Middleton, Natick, Needham, Newton, North Andover, North Reading, Norwood, Peabody, Reading, Revere, Rockport, Salem, Saugus, Shirley, Southboro, Stoneham, Stoughton, Stow, Sudbury, Tewksbury, Topsfield, Tyngsborough, Wakefield, Walpole, Waltham, Watertown, Wayland, Wellesley, Westford, Weston, Westwood, Wilmington, Winchester, Winthrop, Woburn</p>
+        </footer>
       </section>
     </div>
   );
