@@ -264,6 +264,7 @@
 }
 
 .formDiv{
+  padding-bottom: 10px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -358,13 +359,13 @@
 .stylesDiv ul{
   color: #FFFFCC;
   font-size: 20px;
-  width: 100%;
+  width: 50%;
   list-style-type: disc;
 }
 
 .stylesDiv ul li{
   color: #FFFFCC;
-  width: 80%;
+  width: 100%;
   overflow: hidden;
   position: relative;
   left: 20%;
@@ -374,3 +375,32 @@
   display: flex;
   align-items: center;
 } */
+
+
+.refacingTypes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 33%;
+  padding: 3%;
+  
+}
+
+.refacingTypes h1{
+  text-align: center;
+  font-size: 35px;
+}
+
+.refacingLists{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.refacingLists ul{
+  width: 100%;
+  font-size: 20px;
+  padding-left: 20px;
+}
