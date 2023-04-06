@@ -22,7 +22,7 @@ function Gallery1() {
       <section className="formG1">
         <div className="formG1Div">
           <img src={anniversary}></img>
-          <h3>Request A Free Estimate Below</h3>
+          <h3>Get A Free Estimate!</h3>
           <form>
             <input
               type="text"
