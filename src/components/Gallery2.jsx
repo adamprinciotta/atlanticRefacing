@@ -25,7 +25,7 @@ import twenty from "../images/g2_20.png"
 function Gallery1() {
 
   const images = [
-    one, two, three, four, five, six, seven, eleven
+    one, two, three, five, six, seven, nine, ten, eleven, twelve, thirteen, fourteen, sixteen, seventeen, eighteen, nineteen, twenty
   ]
   return (
     <div className="gallery1Container">
