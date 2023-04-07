@@ -9,8 +9,10 @@ import header from "./images/fixedHeader.png";
 function App() {
   return (
     <div className="container">
+      
       <Router>
         <nav className="navLinks">
+          <a href="tel:+7812210334" className="tapToCall"></a>
           <div className="imageContainer">
             <img
               src={header}
@@ -27,8 +29,11 @@ function App() {
             <li>
               <Link to="/GalleryII">Gallery II</Link>
             </li>
-            <li>
+            <li className="nonMobileFAQ">
               <Link to="/FAQ">Launch Video & FAQ</Link>
+            </li>
+            <li className="mobileFAQ">
+              <Link to="/FAQ">FAQ</Link>
             </li>
           </ul>
         </nav>

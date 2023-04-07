@@ -50,7 +50,7 @@ function Home() {
             </video>
           )}
           <div className="content">Content test</div> */}
-          <video autoPlay muted loop>
+          <video autoPlay muted loop controls={false}>
             <source src={video} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -68,7 +68,7 @@ function Home() {
 
           <div className="popular">
             <h1>Popular Now</h1>
-            <br></br>
+            <br className="popBreak"></br>
             <ul>
               <li>White Painted Shaker</li>
               <li>Off-white Painted Raised Panel</li>
@@ -114,81 +114,90 @@ function Home() {
             <br></br>
             Contact David today for a free no pressure estimate.
           </h2>
-          <div class="phoneNumber">781-221-0334</div>
-          <img src={anniversary} alt="38 Year Anniversary Photo" />
+          <div className="phoneAndAnn">
+            <div class="phoneNumber">781-221-0334</div>
+            <br></br>
+            <img
+              className="annImg"
+              src={anniversary}
+              alt="38 Year Anniversary Photo"
+            />
+          </div>
         </div>
       </section>
       <section className="formAndStyles">
-        <div className="formDiv">
-          <h3>Request A Free Estimate Below</h3>
-          <form>
-            <input
-              type="text"
-              id="fullname"
-              name="fullname"
-              placeholder="Full name"
-              required
-            />
+        {/* <div className="formDivAndQual"> */}
+          <div className="formDiv">
+            <h3>Request A Free Estimate Below</h3>
+            <form>
+              <input
+                type="text"
+                id="fullname"
+                name="fullname"
+                placeholder="Full name"
+                required
+              />
 
-            <input
-              type="text"
-              id="city"
-              name="city"
-              placeholder="City"
-              required
-            />
+              <input
+                type="text"
+                id="city"
+                name="city"
+                placeholder="City"
+                required
+              />
 
-            <input
-              type="text"
-              id="state"
-              name="state"
-              placeholder="State"
-              required
-            />
+              <input
+                type="text"
+                id="state"
+                name="state"
+                placeholder="State"
+                required
+              />
 
-            <input
-              type="tel"
-              id="homephone"
-              name="homephone"
-              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-              placeholder="Home Phone Number"
-              required
-            />
+              <input
+                type="tel"
+                id="homephone"
+                name="homephone"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                placeholder="Home Phone Number"
+                required
+              />
 
-            <input
-              type="tel"
-              id="cellphone"
-              name="cellphone"
-              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-              placeholder="Cell Phone Number"
-              required
-            />
+              <input
+                type="tel"
+                id="cellphone"
+                name="cellphone"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                placeholder="Cell Phone Number"
+                required
+              />
 
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Email Address"
-              required
-            />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email Address"
+                required
+              />
 
-            <input className="submit" type="submit" value="Submit" />
-          </form>
-        </div>
-        <div className="qualification">
-          <h2 className="topHalf">
-            Save 50- 70% over full remodel
-            <br></br>
-            Average install 3-4 days
-            <br></br>
-            David has refaced over 1500 kitchens
-          </h2>
-          <h2>David, the owner refaces all kitchens, HIMSELF</h2>
-          <h2 className="subContract">NO SUB-CONTRACTORS</h2>
-          <h2>Over 30,000 Cabinet Doors Installed</h2>
-        </div>
+              <input className="submit" type="submit" value="Submit" />
+            </form>
+          </div>
+          <div className="qualification">
+            <h2 className="topHalf">
+              Save 50- 70% over full remodel
+              <br></br>
+              Average install 3-4 days
+              <br></br>
+              David has refaced over 1500 kitchens
+            </h2>
+            <h2>David, the owner refaces all kitchens, HIMSELF</h2>
+            <h2 className="subContract">NO SUB-CONTRACTORS</h2>
+            <h2>Over 30,000 Cabinet Doors Installed</h2>
+          </div>
+        {/* </div> */}
         {/* <div className="qualificationImgContainer"> */}
-        <img src={five} alt="Kitchen" width="35%" height="80%" />
+        <img src={five} alt="Kitchen" className="qualImg" width="35%" height="80%" />
         {/* </div> */}
         <div className="stylesDiv">
           <h4>Available Door Styles</h4>
@@ -268,10 +277,25 @@ function Home() {
       <section>
         <footer>
           <h1>Burlington, MA - 781-221-0334 and Waltham, MA - 781-899-0118</h1>
-          <h1><i>No Subcontractors—Owner Refaces All Kitchens</i></h1>
+          <h1>
+            <i>No Subcontractors—Owner Refaces All Kitchens</i>
+          </h1>
           <br></br>
           <h4>Kitchen Cabinet Refacing</h4>
-          <p>Acton, Andover, Arlington, Ashland, Bedford, Belmont, Beverly, Billerica, Bolton, Boxford, Burlington, Canton, Carlisle, Chelmsford, Concord, Danvers, Essex, Everett, Framingham, Georgetown, Gloucester, Groton, Hamilton, Holliston, Hopkinton, Hudson, Ipswich, Lancaster, Leominster, Lexington, Lincoln, Littleton, Lynn, Lynnfield, Malden, Manchester by the Sea, Marlboro, Medford, Melrose, Methuen, Middleton, Natick, Needham, Newton, North Andover, North Reading, Norwood, Peabody, Reading, Revere, Rockport, Salem, Saugus, Shirley, Southboro, Stoneham, Stoughton, Stow, Sudbury, Tewksbury, Topsfield, Tyngsborough, Wakefield, Walpole, Waltham, Watertown, Wayland, Wellesley, Westford, Weston, Westwood, Wilmington, Winchester, Winthrop, Woburn</p>
+          <p>
+            Acton, Andover, Arlington, Ashland, Bedford, Belmont, Beverly,
+            Billerica, Bolton, Boxford, Burlington, Canton, Carlisle,
+            Chelmsford, Concord, Danvers, Essex, Everett, Framingham,
+            Georgetown, Gloucester, Groton, Hamilton, Holliston, Hopkinton,
+            Hudson, Ipswich, Lancaster, Leominster, Lexington, Lincoln,
+            Littleton, Lynn, Lynnfield, Malden, Manchester by the Sea, Marlboro,
+            Medford, Melrose, Methuen, Middleton, Natick, Needham, Newton, North
+            Andover, North Reading, Norwood, Peabody, Reading, Revere, Rockport,
+            Salem, Saugus, Shirley, Southboro, Stoneham, Stoughton, Stow,
+            Sudbury, Tewksbury, Topsfield, Tyngsborough, Wakefield, Walpole,
+            Waltham, Watertown, Wayland, Wellesley, Westford, Weston, Westwood,
+            Wilmington, Winchester, Winthrop, Woburn
+          </p>
         </footer>
       </section>
     </div>

@@ -44,7 +44,7 @@
   flex-direction: row;
   background-color: #494031;
   height: 100px;
-  position: fixed; /* remove if don't want the position fixed to then change video sizes */
+  position: fixed;
   z-index: 100;
 }
 
@@ -73,4 +73,83 @@
 
 .navLinks li a:hover{
   border-bottom: 1px solid white;
+}
+
+.tapToCall{
+  position: absolute;
+  width: 5%;
+  top: 0;
+  left: 23%;
+  height: 25%;
+  z-index: 100000;
+}
+
+
+.nonMobileFAQ{
+  display: show;
+}
+
+.mobileFAQ{
+  display: none;
+}
+
+
+@media (max-width: 1150px){
+  
+  .imageContainer {
+    position: absolute;
+    width: 100%;
+    justify-content: center; /* Updated */
+  }
+  
+  .navLinks ul {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    height: 40px;
+    z-index: 1000;
+    background-color: #494031;
+    justify-content: center; /* Updated */
+  }
+  
+  .navLinks li a:hover{
+    border-bottom: none;
+  }
+  
+  .tapToCall{
+    position: absolute;
+    width: 10%;
+    top: 0;
+    left: 55%;
+    height: 25%;
+    z-index: 100000;
+  }
+}
+
+
+@media (max-width: 500px){
+  .tapToCall{
+    left: 60%;
+    width: 25%;
+  }
+}
+
+
+@media (max-width: 675px){
+  .headerImg{
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .navLinks li{
+    font-size: 12px;
+  }
+
+  .nonMobileFAQ{
+    display: none;
+  }
+
+  .mobileFAQ{
+    display: show;
+  }
 }

@@ -258,7 +258,6 @@
 
 .formAndStyles{
   width: 100%;
-  
   background-color: #1A1205;
   display: flex;
   flex-direction: row;
@@ -454,3 +453,121 @@ footer p{
 .container{
   background-image: none;
 }
+
+
+/* .phoneAndAnn{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.formDivAndQual{
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+} */
+
+
+
+
+@media (max-width: 1150px) {
+  .homeContainer{
+    margin-top: 60px;
+  }
+
+  .video-container{
+    margin-top: -20px;
+    height: calc(100vh - 100px);
+  }
+
+  .info{
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .explained{
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+  }
+  .topExplain{
+    width: 33%;
+  }
+  .popBreak{
+    display: none;
+  }
+
+  .galleryContainer{
+    width: 100%;
+    /* height: 100vh; */
+    padding-bottom: 10px;
+  }
+
+  .callToAction{
+    width: 100%;
+    height: 250px;
+    flex-direction: row;
+    /* margin-top: 100px; */
+    text-align: center;
+    align-items: center;
+  }
+
+  .callToAction h2{
+    width: 40%;
+    font-size: 20px;
+  }
+
+  .callToAction h3{
+    font-size: 20px;
+  }
+
+  .annImg{
+    width: 35%;
+    object-fit: contain;
+  }
+
+  .phoneAndAnn{
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .formAndStyles{
+    flex-direction: column;
+  }
+
+  .formDiv{
+    width: 100%;
+  }
+
+  .qualification{
+    width: 100%;
+  }
+
+  .qualImg{
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .stylesDiv{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .stylesDiv ul {
+    width: 100%;
+  }
+
+  .stylesDiv ul li{
+    width: 100%;
+    left: 0;
+  }
+
+  .refacingLists li{
+    font-size: 22px;
+  }
+}
+
+
