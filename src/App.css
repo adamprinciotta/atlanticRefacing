@@ -49,7 +49,7 @@
 }
 
 .navLinks ul{
-  width: 25vw;
+  width: 50vw;
   display: flex;
   align-items: center;
   justify-content: space-evenly;

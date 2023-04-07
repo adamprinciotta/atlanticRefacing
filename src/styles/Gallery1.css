@@ -46,6 +46,10 @@
   padding: 5px;
 }
 
+.formG1Div h3:hover{
+  cursor: default;
+}
+
 .formG1Div form {
   height: 100%;
   display: flex;

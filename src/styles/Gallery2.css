@@ -17,7 +17,7 @@
   flex-direction: column;
 }
 
-.formG1 {
+.formG2 {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
@@ -26,7 +26,7 @@
   height: 80vh;
 }
 
-.formG1Div {
+.formG2Div {
   /* padding-bottom: 10px; */
   display: flex;
   flex-direction: column;
@@ -34,7 +34,7 @@
   justify-content: space-evenly;
 }
 
-.formG1Div h3 {
+.formG2Div h3 {
   width: 33%;
   font-size: 14px;
   background-color: #ffff99;
@@ -46,7 +46,11 @@
   padding: 5px;
 }
 
-.formG1Div form {
+.formG2Div h3:hover{
+  cursor: default;
+}
+
+.formG2Div form {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -54,7 +58,7 @@
   padding-top: 10px;
 }
 
-.formG1Div input {
+.formG2Div input {
   padding: 10px;
   padding-top: 10px;
   margin-top: 10px;
@@ -65,19 +69,19 @@
   width: 100%;
 }
 
-.formG1Div .submit {
+.formG2Div .submit {
   width: 75%;
   margin: 0 auto;
   margin-top: 10px;
 }
 
-.formG1Div img {
+.formG2Div img {
   max-width: 250px;
   margin: 0 auto;
 }
 
-.introG1 {
-  width: 40%;
+.introG2 {
+  width: 60%;
   text-align: center;
   height: 100%;
   display: flex;
@@ -85,31 +89,40 @@
   justify-content: space-evenly;
 }
 
-/* .introG1 img{
+/* .introG2 img{
     max-width: 100%;
     height: 50% !important;
 } */
 
-.introG1 h1 {
+.introG2 h1 {
   color: #12bc29;
 }
 
-.introG1 h5 {
+.introG2 h5 {
   color: white;
   font-weight: normal;
   font-size: 16px;
 }
 
-.introImg {
-  height: 80%;
+.introImgG2 {
+  height: 75%;
+  object-fit:scale-down;
 }
 
-.imagesG1 img {
-  margin: 5px auto;
+.imagesG2{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.imagesG2 img {
+  /* margin: 5px auto; */
   border-radius: 5px;
   height: 75vh;
-  object-fit: cover;
+  object-fit: fill;
 }
+
 
 
 
@@ -302,13 +315,110 @@ footer{
   animation-play-state: running;
 }
 
-.btnAndFooter {
+
+
+
+
+
+
+
+
+.galleryToExtGalleryBtn {
+  background-color: #FFFFFF;
+  width: 500px;
+  height: 75px;
+  font-size: 20px;
+  border-top: 5px solid #CCCCCC;
+  border-bottom: 5px solid #CCCCCC;
+  border-left: 0px;
+  border-right: 0px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes button2Hover {
+  0% {
+    transform: translateY(1px);
+    border-top: 4px solid #cccccc;
+    border-bottom: 4px solid #CCCCCC;
+  }
+  25% {
+    transform: translateY(1.5px);
+    border-top: 3px solid #cccccc;
+    border-bottom: 3px solid #CCCCCC;
+  }
+  50% {
+    transform: translateY(2px);
+    border-top: 2px solid #cccccc;
+    border-bottom: 2px solid #CCCCCC;
+  }
+  75% {
+    transform: translateY(2.5px);
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #CCCCCC;
+  }
+  100% {
+    transform: translateY(3px);
+    border-top: 0;
+    border-bottom: 0;
+  }
+}
+
+@keyframes button2Reverse {
+  0% {
+    transform: translateY(3px);
+    border-top: 0;
+    border-bottom: 0;
+  }
+  25% {
+    transform: translateY(2.5px);
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #CCCCCC;
+  }
+  50% {
+    transform: translateY(2px);
+    border-top: 2px solid #cccccc;
+    border-bottom: 2px solid #CCCCCC;
+  }
+  75% {
+    transform: translateY(1.5px);
+    border-top: 3px solid #cccccc;
+    border-bottom: 3px solid #CCCCCC;
+  }
+  100% {
+    transform: translateY(1px);
+    border-top: 4px solid #cccccc;
+    border-bottom: 4px solid #CCCCCC;
+  }
+}
+
+.galleryToExtGalleryBtn:hover {
+  cursor: pointer;
+  animation-name: button2Hover;
+  animation-duration: 0.05s;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  background-color: #CCCCCC;
+}
+
+.galleryToExtGalleryBtn:not(:hover) {
+  animation-name: button2Reverse;
+  animation-duration: 0.05s;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+
+
+.btnAndFooterG2 {
   width: 100%;
   background-color: black;
-  height: 250px;
+  height: 350px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;

@@ -25,12 +25,12 @@ import twenty from "../images/g2_20.png"
 function Gallery1() {
 
   const images = [
-    one, two, three, five, six, seven, nine, ten, eleven, twelve, thirteen, fourteen, sixteen, seventeen, eighteen, nineteen, twenty
+    two, three, five, six, seven, nine, ten, eleven, twelve, thirteen, fourteen, sixteen, seventeen, eighteen, nineteen, twenty
   ]
   return (
     <div className="gallery1Container">
-      <section className="formG1">
-        <div className="formG1Div">
+      <section className="formG2">
+        <div className="formG2Div">
           <img src={anniversary}></img>
           <h3>Get A Free Estimate!</h3>
           <form>
@@ -87,8 +87,8 @@ function Gallery1() {
             <input className="submit" type="submit" value="Submit" />
           </form>
         </div>
-        <div className="introG1">
-          <h1>Photo Gallery I</h1>
+        <div className="introG2">
+          <h1>Photo Gallery II</h1>
           <h5>
             David, the owner,
             <br></br>
@@ -96,11 +96,11 @@ function Gallery1() {
             <br></br>
             NO sub-contractors
           </h5>
-          <img className="introImg" src={one}></img>
+          <img className="introImgG2" src={one}></img>
         </div>
       </section>
       <br></br>
-      <section className="imagesG1">
+      <section className="imagesG2">
         {images.map((image) => (
                   <img
                     src={image}
@@ -111,8 +111,14 @@ function Gallery1() {
                   />
                 ))}
       </section>
-      <section className="btnAndFooter">
-        <button className="galleryItoIIBtn">Click For Gallery II</button>
+      <section className="btnAndFooterG2">
+        <div className="g2Btn1">
+          <button className="galleryToExtGalleryBtn">CLICK HERE FOR MORE PHOTOS AND REVIEWS</button>
+        </div>
+        <br></br>
+        <div className="g2Btn2">
+          <button className="galleryItoIIBtn">Click For Gallery I</button>
+        </div>
         <h5>Kitchen cabinet refacing Massachusetts</h5>
         <footer>
           <h1>Burlington, MA - 781-221-0334 and Waltham, MA - 781-899-0118</h1>
