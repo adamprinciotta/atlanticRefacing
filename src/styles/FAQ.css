@@ -137,3 +137,55 @@ h6 > b{
     font-size: 18px;
 }
 
+.footerBr{
+  display: none;
+}
+
+@media (max-width: 900px){
+  .FAQContainer{
+    height: calc(100% + 100px);
+    margin-top: 50px;
+  }
+
+  video{
+    width: 100%;
+  }
+
+  .FAQForm{
+      margin-top: 5%;
+      flex-direction: column-reverse;
+      height: 100%;
+  }
+
+  .formFAQDiv{
+    width: 100%;
+    padding-bottom: 5px;
+  }
+
+  .FAQTopSection{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .FAQTopSection img{
+    width: 100%;
+    margin-left: 1%;
+  }
+
+  .FAQForm img{
+    display: none;
+  }
+
+  footer{
+    height: 100%;
+  }
+
+
+
+}
+
+@media (max-width: 600px) {
+  .footerBr{
+    display: block;
+  } 
+}

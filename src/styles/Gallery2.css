@@ -434,3 +434,63 @@ footer {
   text-align: center;
 
 }
+
+
+@media (max-width: 900px){
+
+  .gallery2Container{
+    height: calc(100% + 200px);
+    margin-top: 250px;
+  }
+
+  .formG2{
+    margin-top: 5%;
+    flex-direction: column-reverse;
+    height: 100%;
+  }
+
+  .formG2Div{
+    margin-top: 5px;
+    width: 100%;
+    padding-bottom: 5px;
+  }
+
+  .introG2{
+    width: 95%;
+    object-fit: scale-down;
+  }
+  .h5{
+    width: 100%;
+  }
+
+  .imagesG2{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+
+  .imagesG2 img{
+    height: 100%;
+  }
+
+  .galleryToExtGalleryBtn{
+    width: 90%;
+    margin: 0 auto;
+    padding: 5px;
+    justify-content: center;
+  }
+  
+  footer{
+    padding-bottom: 10px;
+  }
+
+  .btnAndFooterG2 h5{
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 900px){
+  .formG2{
+    margin-top: 10%;
+  }
+}

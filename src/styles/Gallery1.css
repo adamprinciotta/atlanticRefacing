@@ -328,3 +328,51 @@ footer {
   text-align: center;
 
 }
+
+
+@media (max-width: 900px){
+
+  .gallery1Container{
+    height: calc(100% + 200px);
+    margin-top: 250px;
+  }
+
+  .formG1{
+    margin-top: 5%;
+    flex-direction: column-reverse;
+    height: 100%;
+  }
+
+  .formG1Div{
+    margin-top: 5px;
+    width: 100%;
+    padding-bottom: 5px;
+  }
+
+  .introG1{
+    width: 100%;
+    object-fit: scale-down;
+  }
+  .h5{
+    width: 100%;
+  }
+
+  .imagesG1 img{
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .btnAndFooter{
+    height: 100%;
+  }
+
+  .btnAndFooter h5{
+    text-align: center;
+  }
+}
+
+@media (max-width: 900px){
+  .formG1{
+    margin-top: 10%;
+  }
+}

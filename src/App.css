@@ -90,7 +90,10 @@
 }
 
 .mobileFAQ{
-  display: none;
+    display: none;
+    position: absolute;
+    left: -100vh;
+    top: -100vh;
 }
 
 
@@ -145,11 +148,27 @@
     font-size: 12px;
   }
 
-  .nonMobileFAQ{
-    display: none;
+  .nonMobileFAQ a{
+    position: absolute;
+    left: -100vh;
+    top: -100vh;
   }
 
   .mobileFAQ{
-    display: show;
+    display: block;
+    position: static;
+  }
+}
+
+
+@media (max-width: 600px){
+  .nonMobileFAQ a{
+    position: absolute;
+    left: -100vh;
+    top: -100vh;
+  }
+
+  .navLinks li{
+    font-size: 10px;
   }
 }

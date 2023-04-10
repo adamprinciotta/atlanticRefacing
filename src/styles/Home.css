@@ -571,3 +571,63 @@ footer p{
 }
 
 
+@media (max-width: 600px){
+  .explained h2 {
+    font-size: 20px;
+  }
+
+  .explained h1{
+    font-size: 30px;
+  }
+
+  .explained h3{
+    font-size: 20px;
+  }
+
+  .popular ul li{
+    font-size: 14px;
+  }
+
+  .overview{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+  }
+
+  .callToAction{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .callToAction h2{
+    width: 100%;
+  }
+
+  .typesAndScroll{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .refacingTypes{
+    width: 100%;
+  }
+
+  .imageGalleryContainer img{
+    width: 100%;
+  }
+
+  .footer p{
+    background-color: black;
+  }
+
+  .annImg{
+    width: 75%;
+  }
+
+  .stylesDiv{
+    width: 100%;
+  }
+}

@@ -80,7 +80,9 @@ function Home() {
 
           <div className="overview">
             <h3>Save 50-70% Over Full Remodel</h3>
+            <hr></hr>
             <h3>Average Install 3-4 Days</h3>
+            <hr></hr>
             <h3>Over 1500 Kitchens Refaced</h3>
           </div>
         </div>

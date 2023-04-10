@@ -105,7 +105,7 @@ function Gallery1() {
         <button className="galleryItoIIBtn">Click For Gallery II</button>
         <h5>Kitchen cabinet refacing Massachusetts</h5>
         <footer>
-          <h1>Burlington, MA - 781-221-0334 and Waltham, MA - 781-899-0118</h1>
+        <h1>Burlington, MA - <br className="footerBr"></br>781-221-0334 <br className="footerBr"></br>and <br className="footerBr"></br>Waltham, MA - <br className="footerBr"></br>781-899-0118</h1>
           <h1><i>No Subcontractors—Owner Refaces All Kitchens</i></h1>
           <br></br>
           <h4>Kitchen Cabinet Refacing</h4>
