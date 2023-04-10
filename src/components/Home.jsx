@@ -15,9 +15,63 @@ import five from "../images/5.png";
 import anniversary from "../images/anniversary.png";
 
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 function Home() {
   const [isFirstVideo, setIsFirstVideo] = useState(true);
+
+  const [formData, setFormData] = useState({
+    name: "",
+    city: "",
+    state: "",
+    homePhone: "",
+    cellPhone: "",
+    email: "",
+  });
+
+  const handleChange = (e) => {
+    console.log(e);
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    const letters = /[a-zA-Z]/;
+    if(letters.test(formData.homePhone) || letters.test(formData.cellPhone)){
+      alert("Phone numbers cannot have letters")
+    }
+    else{
+      emailjs.send(
+        process.env.REACT_APP_SERVICE_ID,
+        "template_sq70hbr",
+        {
+          name: formData.name,
+          city: formData.city,
+          state: formData.state,
+          homePhone: formData.homePhone,
+          cellPhone: formData.cellPhone,
+          email: formData.email,
+        },
+        process.env.REACT_APP_PUBLIC_KEY
+      );
+  
+      setFormData({
+        name: "",
+        city: "",
+        state: "",
+        homePhone: "",
+        cellPhone: "",
+        email: "",
+      });
+  
+      alert("Submitted!");
+    }
+  };
 
   const images = [
     {
@@ -117,7 +171,7 @@ function Home() {
             Contact David today for a free no pressure estimate.
           </h2>
           <div className="phoneAndAnn">
-            <div class="phoneNumber">781-221-0334</div>
+            <div className="phoneNumber">781-221-0334</div>
             <br></br>
             <img
               className="annImg"
@@ -129,77 +183,99 @@ function Home() {
       </section>
       <section className="formAndStyles">
         {/* <div className="formDivAndQual"> */}
-          <div className="formDiv">
-            <h3>Request A Free Estimate Below</h3>
-            <form>
-              <input
-                type="text"
-                id="fullname"
-                name="fullname"
-                placeholder="Full name"
-                required
-              />
+        <div className="formDiv">
+          <h3>Request A Free Estimate Below</h3>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Full name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
 
-              <input
-                type="text"
-                id="city"
-                name="city"
-                placeholder="City"
-                required
-              />
+            <input
+              type="text"
+              id="city"
+              name="city"
+              placeholder="City"
+              value={formData.city}
+              onChange={handleChange}
+              required
+            />
 
-              <input
-                type="text"
-                id="state"
-                name="state"
-                placeholder="State"
-                required
-              />
+            <input
+              type="text"
+              id="state"
+              name="state"
+              placeholder="State"
+              value={formData.state}
+              onChange={handleChange}
+              required
+            />
 
-              <input
+            {/* <input
                 type="tel"
                 id="homephone"
                 name="homephone"
                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                 placeholder="Home Phone Number"
+                value={formData.homePhone}
+                onChange={handleChange}
                 required
-              />
+              /> */}
+            <input
+              type="text"
+              name="homePhone"
+              placeholder="Home Phone Number"
+              value={formData.homePhone}
+              onChange={handleChange}
+            />
 
-              <input
-                type="tel"
-                id="cellphone"
-                name="cellphone"
-                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                placeholder="Cell Phone Number"
-                required
-              />
+            <input
+              type="text"
+              name="cellPhone"
+              placeholder="Cell Phone Number"
+              value={formData.cellPhone}
+              onChange={handleChange}
+            />
 
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Email Address"
-                required
-              />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email Address"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
 
-              <input className="submit" type="submit" value="Submit" />
-            </form>
-          </div>
-          <div className="qualification">
-            <h2 className="topHalf">
-              Save 50- 70% over full remodel
-              <br></br>
-              Average install 3-4 days
-              <br></br>
-              David has refaced over 1500 kitchens
-            </h2>
-            <h2>David, the owner refaces all kitchens, HIMSELF</h2>
-            <h2 className="subContract">NO SUB-CONTRACTORS</h2>
-            <h2>Over 30,000 Cabinet Doors Installed</h2>
-          </div>
+            <input className="submit" type="submit" value="Submit" />
+          </form>
+        </div>
+        <div className="qualification">
+          <h2 className="topHalf">
+            Save 50- 70% over full remodel
+            <br></br>
+            Average install 3-4 days
+            <br></br>
+            David has refaced over 1500 kitchens
+          </h2>
+          <h2>David, the owner refaces all kitchens, HIMSELF</h2>
+          <h2 className="subContract">NO SUB-CONTRACTORS</h2>
+          <h2>Over 30,000 Cabinet Doors Installed</h2>
+        </div>
         {/* </div> */}
         {/* <div className="qualificationImgContainer"> */}
-        <img src={five} alt="Kitchen" className="qualImg" width="35%" height="80%" />
+        <img
+          src={five}
+          alt="Kitchen"
+          className="qualImg"
+          width="35%"
+          height="80%"
+        />
         {/* </div> */}
         <div className="stylesDiv">
           <h4>Available Door Styles</h4>
@@ -227,7 +303,7 @@ function Home() {
         </div>
       </section>
       <section>
-        <div class="typesAndScroll">
+        <div className="typesAndScroll">
           <div className="refacingTypes">
             <h1>Solid Wood Refacing</h1>
             <div className="refacingLists">

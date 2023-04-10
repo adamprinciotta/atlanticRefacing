@@ -17,6 +17,7 @@ function Gallery1() {
   const images = [
     one, two, three, four, five, six, seven, eleven
   ]
+  
   return (
     <div className="gallery1Container">
       <section className="formG1">
