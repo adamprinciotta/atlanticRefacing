@@ -47,7 +47,7 @@ function Home() {
     }
     else{
       emailjs.send(
-        REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_SERVICE_ID,
         "template_sq70hbr",
         {
           name: formData.name,
@@ -57,7 +57,7 @@ function Home() {
           cellPhone: formData.cellPhone,
           email: formData.email,
         },
-        REACT_APP_PUBLIC_KEY
+        process.env.REACT_APP_PUBLIC_KEY
       );
   
       setFormData({
