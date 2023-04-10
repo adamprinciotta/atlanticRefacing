@@ -2,6 +2,6 @@
   command = "npm run build"
   publish = "build"
   environment = { 
-    REACT_APP_SERVICE_ID = service_0t8zjeb,
-    REACT_APP_PUBLIC_KEY = atmVZXCvcESkdGIdm
+    REACT_APP_SERVICE_ID = "service_0t8zjeb",
+    REACT_APP_PUBLIC_KEY = "atmVZXCvcESkdGIdm"
   }
