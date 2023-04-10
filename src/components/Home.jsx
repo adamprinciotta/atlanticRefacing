@@ -46,6 +46,7 @@ function Home() {
       alert("Phone numbers cannot have letters")
     }
     else{
+      console.log(process.env.REACT_APP_PUBLIC_KEY)
       emailjs.send(
         process.env.REACT_APP_SERVICE_ID,
         "template_sq70hbr",
