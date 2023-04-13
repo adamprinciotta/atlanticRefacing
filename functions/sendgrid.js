@@ -1,6 +1,9 @@
 const client = require("@sendgrid/mail")
 
 function sendEmail(client, message, senderEmail, senderName) {
+    console.log(message)
+    console.log(senderEmail)
+    
   return new Promise((fulfill, reject) => {
     const data = {
       from: {

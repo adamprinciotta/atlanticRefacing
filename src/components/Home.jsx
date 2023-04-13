@@ -79,7 +79,7 @@ function Home() {
         email: "",
       });
   
-      alert("Submitted!");
+      // alert("Submitted!");
     }
   };
 
