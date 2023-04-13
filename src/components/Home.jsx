@@ -16,6 +16,7 @@ import anniversary from "../images/anniversary.png";
 
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import axios from 'axios'
 
 function Home() {
   const [isFirstVideo, setIsFirstVideo] = useState(true);
@@ -38,7 +39,7 @@ function Home() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
     const letters = /[a-zA-Z]/;
@@ -46,19 +47,28 @@ function Home() {
       alert("Phone numbers cannot have letters")
     }
     else{
-      emailjs.send(
-        process.env.REACT_APP_SERVICE_ID,
-        "template_sq70hbr",
-        {
-          name: formData.name,
-          city: formData.city,
-          state: formData.state,
-          homePhone: formData.homePhone,
-          cellPhone: formData.cellPhone,
-          email: formData.email,
-        },
-        process.env.REACT_APP_PUBLIC_KEY
-      );
+      try {
+        await axios.post('/.netlify/functions/sendgrid', {
+          message: 'Name: ' + formData.name + "\nState: " + formData.state + "\nHome Phone: " + formData.homePhone + "\nCell Phone: " + formData.cellPhone + "\nEmail: " + formData.email
+        })
+        alert('Thank you, your message was sent successfully!')
+      } catch (e) {
+        console.error(e)
+        alert('Error: Your message could not be sent')
+      }
+      // emailjs.send(
+      //   process.env.REACT_APP_SERVICE_ID,
+      //   "template_sq70hbr",
+      //   {
+      //     name: formData.name,
+      //     city: formData.city,
+      //     state: formData.state,
+      //     homePhone: formData.homePhone,
+      //     cellPhone: formData.cellPhone,
+      //     email: formData.email,
+      //   },
+      //   process.env.REACT_APP_PUBLIC_KEY
+      // );
   
       setFormData({
         name: "",
