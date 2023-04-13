@@ -22,6 +22,7 @@ function sendEmail(client, message, senderEmail, senderName) {
 }
 
 exports.handler = function(event, context, callback) {
+  console.log("Made it to the handler")
   const {
     SENDGRID_API_KEY,
     SENDGRID_SENDER_EMAIL,

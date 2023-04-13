@@ -48,7 +48,7 @@ function Home() {
     }
     else{
       try {
-        await axios.post('/.netlify/functions/sendgrid.js', {
+        await axios.post('/.netlify/functions/sendgrid', {
           message: 'Name: ' + formData.name + "\nState: " + formData.state + "\nHome Phone: " + formData.homePhone + "\nCell Phone: " + formData.cellPhone + "\nEmail: " + formData.email
         })
         alert('Thank you, your message was sent successfully!')
