@@ -38,7 +38,8 @@ function Home() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  // const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
     e.preventDefault();
     
     const letters = /[a-zA-Z]/;
@@ -46,30 +47,50 @@ function Home() {
       alert("Phone numbers cannot have letters")
     }
     else{
-      emailjs.send(
-        process.env.REACT_APP_SERVICE_ID,
-        "template_sq70hbr",
-        {
-          name: formData.name,
-          city: formData.city,
-          state: formData.state,
-          homePhone: formData.homePhone,
-          cellPhone: formData.cellPhone,
-          email: formData.email,
+      // emailjs.send(
+      //   process.env.REACT_APP_SERVICE_ID,
+      //   "template_sq70hbr",
+      //   {
+      //     name: formData.name,
+      //     city: formData.city,
+      //     state: formData.state,
+      //     homePhone: formData.homePhone,
+      //     cellPhone: formData.cellPhone,
+      //     email: formData.email,
+      //   },
+      //   process.env.REACT_APP_PUBLIC_KEY
+      // );
+  
+      // setFormData({
+      //   name: "",
+      //   city: "",
+      //   state: "",
+      //   homePhone: "",
+      //   cellPhone: "",
+      //   email: "",
+      // });
+  
+      // alert("Submitted!");
+      const response = await fetch("https://formspree.io/f/mvonvlap", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-        process.env.REACT_APP_PUBLIC_KEY
-      );
-  
-      setFormData({
-        name: "",
-        city: "",
-        state: "",
-        homePhone: "",
-        cellPhone: "",
-        email: "",
+        body: JSON.stringify(formData),
       });
-  
-      alert("Submitted!");
+      if (response.ok) {
+        alert("Form submitted successfully!");
+        setFormData({
+          name: "",
+          city: "",
+          state: "",
+          homePhone: "",
+          cellPhone: "",
+          email: "",
+        });
+      } else {
+        alert("Failed to submit form.");
+      }
     }
   };
 
@@ -185,7 +206,11 @@ function Home() {
         {/* <div className="formDivAndQual"> */}
         <div className="formDiv">
           <h3>Request A Free Estimate Below</h3>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit}
+                action="https://formspree.io/f/mvonvlap"
+                method="POST"
+                data-formspree-honeypot
+                data-formspree-response>
             <input
               type="text"
               id="name"
