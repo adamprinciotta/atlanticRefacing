@@ -47,15 +47,32 @@ function Home() {
       alert("Phone numbers cannot have letters")
     }
     else{
-      try {
-        await axios.post('/.netlify/functions/sendgrid', {
-          message: 'Name: ' + formData.name + "\nState: " + formData.state + "\nHome Phone: " + formData.homePhone + "\nCell Phone: " + formData.cellPhone + "\nEmail: " + formData.email
-        })
-        alert('Thank you, your message was sent successfully!')
-      } catch (e) {
-        console.error(e)
-        alert('Error: Your message could not be sent')
-      }
+      fetch("/.netlify/functions/sendgrid", {
+        method: "POST",
+        body: JSON.stringify({
+          name: formData.name,
+          city: formData.city,
+          state: formData.state,
+          homePhone: formData.homePhone,
+          cellPhone: formData.cellPhone,
+          email: formData.email
+        }),
+        
+      });
+
+
+      // try {
+      //   await axios.post('/.netlify/functions/sendgrid', {
+      //     message: 'Name: ' + formData.name + "\nState: " + formData.state + "\nHome Phone: " + formData.homePhone + "\nCell Phone: " + formData.cellPhone + "\nEmail: " + formData.email
+      //   })
+      //   alert('Thank you, your message was sent successfully!')
+      // } catch (e) {
+      //   console.error(e)
+      //   alert('Error: Your message could not be sent')
+      // }
+
+
+
       // emailjs.send(
       //   process.env.REACT_APP_SERVICE_ID,
       //   "template_sq70hbr",
@@ -79,6 +96,7 @@ function Home() {
         email: "",
       });
   
+      alert("Request sent!")
       // alert("Submitted!");
     }
   };
