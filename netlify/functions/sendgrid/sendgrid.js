@@ -10,7 +10,7 @@ export async function handler(event, context) {
   }
 
   const formData = JSON.parse(event.body);
-  console.log("This is formData: " + formData.name)
+
 
   try{
       const response = await fetch(`${process.env.URL}/.netlify/functions/emails/sendGridEmail`, {
@@ -32,7 +32,7 @@ export async function handler(event, context) {
         },
       }),
     });
-    console.log("This is the response: " + response.status)
+
     if(!response.ok){
       return{
         statusCode: response.status,
@@ -40,14 +40,12 @@ export async function handler(event, context) {
       };
     }
 
-    console.log("Email should be sent")
     return {
       statusCode: 200,
       body: JSON.stringify("Email sent!"),
     };
   }
   catch(error){
-    console.log("Error: " + error)
     return{
     statusCode: 500,
     body: JSON.stringify(`Server error: ${error}`)

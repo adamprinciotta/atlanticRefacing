@@ -31,7 +31,6 @@ function Home() {
   });
 
   const handleChange = (e) => {
-    console.log(e);
     const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,
