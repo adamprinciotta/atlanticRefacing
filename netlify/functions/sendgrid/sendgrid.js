@@ -1,4 +1,4 @@
-// import fetch from 'node-fetch';
+import fetch from 'node-fetch';
 import { sendEmail } from "@netlify/emails";
 
 export async function handler(event, context) {
