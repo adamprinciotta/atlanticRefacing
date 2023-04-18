@@ -1,73 +1,6 @@
-// const client = require("@sendgrid/mail")
-
-// function sendEmail(client, message, senderEmail, senderName) {
-  
-//   return new Promise((fulfill, reject) => {
-//     const data = {
-//       from: {
-//         email: senderEmail,
-//         name: senderName
-//       },
-//       subject: 'New Estimate',
-//       to: senderEmail,
-//       html: `Hey, you\'ve sent an email from Netlify Functions<br/>Message: ${message}`
-//     }
-
-//     client
-//       .send(data)
-//       .then(([response, body]) => {
-//         fulfill(response)
-//       })
-//       .catch(error => reject(error))
-//   })
-// }
-
-// exports.handler = function(event, context, callback) {
-//   console.log("Made it to the handler")
-//   const {
-//     SENDGRID_API_KEY,
-//     SENDGRID_SENDER_EMAIL,
-//     SENDGRID_SENDER_NAME
-//   } = process.env
-
-//   const body = JSON.parse(event.body)
-//   const message = body.message
-
-//   client.setApiKey(SENDGRID_API_KEY)
-
-//   sendEmail(
-//     client,
-//     message,
-//     SENDGRID_SENDER_EMAIL,
-//     SENDGRID_SENDER_NAME
-//   )
-//   .then(response => callback(null, { statusCode: response.statusCode }))
-//   .catch(err => callback(err, null))
-// }
-
-// import { sendEmail } from "@netlify/emails";
-
-// await sendEmail({
-//   from: "",
-//   to: "",
-//   subject: "",
-//   template: "sendGridEmail",
-//   parameters: {
-//     name: "", 
-//     city: "", 
-//     state: "", 
-//     homePhone: "", 
-//     cellPhone: "", 
-//     email: ""
-//   },
-// });
-
 import fetch from 'node-fetch';
 import { sendEmail } from "@netlify/emails";
 
-//const
-// exports.handler
-// exports.handler = async function (event, context) {
 export async function handler(event, context) {
   if (event.body === null) {
     return {
@@ -88,7 +21,7 @@ export async function handler(event, context) {
       body: JSON.stringify({
         from: "adamprinciotta@gmail.com",
         to: "adamprinciotta@gmail.com",
-        subject: "test Subject",
+        subject: "New Estimate Request",
         parameters: {
           name: formData.name,
           city: formData.city,
@@ -122,5 +55,4 @@ export async function handler(event, context) {
   }
 };
 
-// export { handler };
 
