@@ -39,7 +39,8 @@ function Home() {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  // const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
     e.preventDefault();
     
     const letters = /[a-zA-Z]/;
@@ -213,7 +214,11 @@ function Home() {
         {/* <div className="formDivAndQual"> */}
         <div className="formDiv">
           <h3>Request A Free Estimate Below</h3>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit}
+                action="https://formspree.io/f/mvonvlap"
+                method="POST"
+                data-formspree-honeypot
+                data-formspree-response>
             <input
               type="text"
               id="name"
