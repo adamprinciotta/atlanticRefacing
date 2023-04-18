@@ -47,6 +47,9 @@ function Home() {
     if(letters.test(formData.homePhone) || letters.test(formData.cellPhone)){
       alert("Phone numbers cannot have letters")
     }
+    else if(formData.homePhone.length != 10 || formData.cellPhone.length != 10){
+      alert("Make sure your phone number is 10 digits")
+    }
     else{
       fetch("/.netlify/functions/sendgrid", {
         method: "POST",
@@ -61,33 +64,6 @@ function Home() {
         
       });
 
-
-      // try {
-      //   await axios.post('/.netlify/functions/sendgrid', {
-      //     message: 'Name: ' + formData.name + "\nState: " + formData.state + "\nHome Phone: " + formData.homePhone + "\nCell Phone: " + formData.cellPhone + "\nEmail: " + formData.email
-      //   })
-      //   alert('Thank you, your message was sent successfully!')
-      // } catch (e) {
-      //   console.error(e)
-      //   alert('Error: Your message could not be sent')
-      // }
-
-
-
-      // emailjs.send(
-      //   process.env.REACT_APP_SERVICE_ID,
-      //   "template_sq70hbr",
-      //   {
-      //     name: formData.name,
-      //     city: formData.city,
-      //     state: formData.state,
-      //     homePhone: formData.homePhone,
-      //     cellPhone: formData.cellPhone,
-      //     email: formData.email,
-      //   },
-      //   process.env.REACT_APP_PUBLIC_KEY
-      // );
-  
       setFormData({
         name: "",
         city: "",
@@ -98,7 +74,6 @@ function Home() {
       });
   
       alert("Request sent!")
-      // alert("Submitted!");
     }
   };
 
@@ -121,18 +96,6 @@ function Home() {
     <div className="homeContainer">
       <section className="mainScren">
         <div className="video-container">
-          {/* {isFirstVideo ? (
-            <video autoPlay muted onEnded={handleVideoEnded}>
-              <source src={video} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          ) : (
-            <video autoPlay muted onEnded={handleVideoEnded}>
-              <source src={video2} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          )}
-          <div className="content">Content test</div> */}
           <video autoPlay muted loop controls={false}>
             <source src={video} type="video/mp4" />
             Your browser does not support the video tag.

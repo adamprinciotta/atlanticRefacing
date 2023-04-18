@@ -21,24 +21,85 @@ import eighteen from "../images/g2_18.png";
 import nineteen from "../images/g2_19.png";
 import twenty from "../images/g2_20.png"
 
+import { useState } from "react";
+
 
 function Gallery1() {
 
   const images = [
     two, three, five, six, seven, nine, ten, eleven, twelve, thirteen, fourteen, sixteen, seventeen, eighteen, nineteen, twenty
   ]
+
+  const [formData, setFormData] = useState({
+    name: "",
+    city: "",
+    state: "",
+    homePhone: "",
+    cellPhone: "",
+    email: "",
+  });
+
+  const handleChange = (e) => {
+    console.log(e);
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    const letters = /[a-zA-Z]/;
+    if(letters.test(formData.homePhone) || letters.test(formData.cellPhone)){
+      alert("Phone numbers cannot have letters")
+    }
+    else if(formData.homePhone.length != 10 || formData.cellPhone.length != 10){
+      alert("Make sure your phone number is 10 digits")
+    }
+    else{
+      fetch("/.netlify/functions/sendgrid", {
+        method: "POST",
+        body: JSON.stringify({
+          name: formData.name,
+          city: formData.city,
+          state: formData.state,
+          homePhone: formData.homePhone,
+          cellPhone: formData.cellPhone,
+          email: formData.email
+        }),
+        
+      });
+
+      setFormData({
+        name: "",
+        city: "",
+        state: "",
+        homePhone: "",
+        cellPhone: "",
+        email: "",
+      });
+  
+      alert("Request sent!")
+    }
+  };
+
+
   return (
     <div className="gallery1Container">
       <section className="formG2">
         <div className="formG2Div">
           <img src={anniversary}></img>
           <h3>Get A Free Estimate!</h3>
-          <form>
-            <input
+          <form onSubmit={handleSubmit}>
+          <input
               type="text"
-              id="fullname"
-              name="fullname"
+              id="name"
+              name="name"
               placeholder="Full name"
+              value={formData.name}
+              onChange={handleChange}
               required
             />
 
@@ -47,6 +108,8 @@ function Gallery1() {
               id="city"
               name="city"
               placeholder="City"
+              value={formData.city}
+              onChange={handleChange}
               required
             />
 
@@ -55,25 +118,25 @@ function Gallery1() {
               id="state"
               name="state"
               placeholder="State"
+              value={formData.state}
+              onChange={handleChange}
               required
             />
 
             <input
-              type="tel"
-              id="homephone"
-              name="homephone"
-              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              type="text"
+              name="homePhone"
               placeholder="Home Phone Number"
-              required
+              value={formData.homePhone}
+              onChange={handleChange}
             />
 
             <input
-              type="tel"
-              id="cellphone"
-              name="cellphone"
-              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              type="text"
+              name="cellPhone"
               placeholder="Cell Phone Number"
-              required
+              value={formData.cellPhone}
+              onChange={handleChange}
             />
 
             <input
@@ -81,6 +144,8 @@ function Gallery1() {
               id="email"
               name="email"
               placeholder="Email Address"
+              value={formData.email}
+              onChange={handleChange}
               required
             />
 
