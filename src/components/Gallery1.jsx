@@ -112,16 +112,6 @@ function Gallery1() {
               required
             />
 
-            {/* <input
-                type="tel"
-                id="homephone"
-                name="homephone"
-                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                placeholder="Home Phone Number"
-                value={formData.homePhone}
-                onChange={handleChange}
-                required
-              /> */}
             <input
               type="text"
               name="homePhone"

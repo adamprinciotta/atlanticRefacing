@@ -174,7 +174,6 @@ function Home() {
         </div>
       </section>
       <section className="formAndStyles">
-        {/* <div className="formDivAndQual"> */}
         <div className="formDiv">
           <h3>Request A Free Estimate Below</h3>
           <form onSubmit={handleSubmit}
@@ -212,16 +211,6 @@ function Home() {
               required
             />
 
-            {/* <input
-                type="tel"
-                id="homephone"
-                name="homephone"
-                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                placeholder="Home Phone Number"
-                value={formData.homePhone}
-                onChange={handleChange}
-                required
-              /> */}
             <input
               type="text"
               name="homePhone"
@@ -263,8 +252,7 @@ function Home() {
           <h2 className="subContract">NO SUB-CONTRACTORS</h2>
           <h2>Over 30,000 Cabinet Doors Installed</h2>
         </div>
-        {/* </div> */}
-        {/* <div className="qualificationImgContainer"> */}
+
         <img
           src={five}
           alt="Kitchen"
@@ -272,7 +260,7 @@ function Home() {
           width="35%"
           height="80%"
         />
-        {/* </div> */}
+
         <div className="stylesDiv">
           <h4>Available Door Styles</h4>
           <br></br>
@@ -316,13 +304,6 @@ function Home() {
             </div>
           </div>
           <div className="imageGalleryContainer">
-            {/* <ImageGallery
-              items={images}
-              showFullscreenButton={false}
-              showPlayButton={false}
-              showNav={false}
-              autoPlay={true}
-              /> */}
             <ImageGallery
               items={images}
               showFullscreenButton={false}
@@ -343,7 +324,7 @@ function Home() {
                   )}
                 </div>
               )}
-              className="my-image-gallery" // add your custom className here
+              className="my-image-gallery"
             />
           </div>
         </div>
