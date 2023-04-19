@@ -55,7 +55,7 @@
 
 
 import axios from 'axios';
-import { sendEmail } from "@netlify/emails";
+//import { sendEmail } from "@netlify/emails";
 
 export async function handler(event, context) {
   if (event.body === null) {
