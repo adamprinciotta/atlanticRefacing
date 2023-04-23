@@ -25,13 +25,16 @@ function App() {
               <Link to="/" onClick={() => window.scrollTo(0, 0)}>Home</Link>
             </li>
             <li>
-              <Link to="/GalleryI">Gallery I</Link>
+              {/* <Link to="/GalleryI">Gallery I</Link> */}
+              <Link to="/GalleryI" onClick={() => window.scrollTo(0, 0)}>Gallery I</Link>
             </li>
             <li>
-              <Link to="/GalleryII">Gallery II</Link>
+              {/* <Link to="/GalleryII">Gallery II</Link> */}
+              <Link to="/GalleryII" onClick={() => window.scrollTo(0, 0)}>Gallery II</Link>
             </li>
             <li className="nonMobileFAQ">
-              <Link to="/FAQ">Launch Video & FAQ</Link>
+              {/* <Link to="/FAQ">Launch Video & FAQ</Link> */}
+              <Link to="/FAQ" onClick={() => window.scrollTo(0, 0)}>FAQ</Link>
             </li>
             <li className="mobileFAQ">
               <Link to="/FAQ">FAQ</Link>
