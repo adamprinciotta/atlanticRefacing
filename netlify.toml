@@ -1,3 +1,5 @@
 [[plugins]]
   package = "@netlify/plugin-emails"
 
+[functions]
+  node_bundler = "esbuild"
