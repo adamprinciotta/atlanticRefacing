@@ -21,7 +21,8 @@ function App() {
           </div>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              {/* <Link to="/">Home</Link> */}
+              <Link to="/" onClick={() => window.scrollTo(0, 0)}>Home</Link>
             </li>
             <li>
               <Link to="/GalleryI">Gallery I</Link>

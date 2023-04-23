@@ -7,9 +7,6 @@ import four from "../images/g1_4.png";
 import five from "../images/g1_5.png";
 import six from "../images/g1_6.png";
 import seven from "../images/g1_7.png";
-// import eight from "../images/g1_8.png";
-// import nine from "../images/g1_9.png";
-// import ten from "../images/g1_10.png";
 import eleven from "../images/g1_11.png";
 
 import { useState } from "react";
