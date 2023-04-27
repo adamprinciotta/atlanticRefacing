@@ -318,7 +318,13 @@ footer{
 
 
 
+.g2Btn1 a{
+  text-decoration: none;
+}
 
+.g2Btn2 a{
+  color: transparent;
+}
 
 
 

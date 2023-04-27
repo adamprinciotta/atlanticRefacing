@@ -23,6 +23,7 @@ import twenty from "../images/g2_20.png"
 
 import { useState } from "react";
 
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 function Gallery1() {
 
@@ -177,11 +178,11 @@ function Gallery1() {
       </section>
       <section className="btnAndFooterG2">
         <div className="g2Btn1">
-          <button className="galleryToExtGalleryBtn">CLICK HERE FOR MORE PHOTOS AND REVIEWS</button>
+        <a href="https://atlanticrefacingphotos.com/"><button className="galleryToExtGalleryBtn">CLICK HERE FOR MORE PHOTOS AND REVIEWS</button></a>
         </div>
         <br></br>
         <div className="g2Btn2">
-          <button className="galleryItoIIBtn">Click For Gallery I</button>
+          <Link to="/GalleryI" onClick={() => window.scrollTo(0, 0)}><button className="galleryItoIIBtn">Click For Gallery I</button></Link>
         </div>
         <h5>Kitchen cabinet refacing Massachusetts</h5>
         <footer>

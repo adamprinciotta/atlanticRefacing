@@ -11,6 +11,8 @@ import eleven from "../images/g1_11.png";
 
 import { useState } from "react";
 
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+
 function Gallery1() {
 
   const images = [
@@ -162,7 +164,9 @@ function Gallery1() {
                 ))}
       </section>
       <section className="btnAndFooter">
-        <button className="galleryItoIIBtn">Click For Gallery II</button>
+        <div className="btnToG2">
+          <Link to="/GalleryII" onClick={() => window.scrollTo(0, 0)}><button className="galleryItoIIBtn" href="GalleryII">Click For Gallery II</button></Link>
+        </div>
         <h5>Kitchen cabinet refacing Massachusetts</h5>
         <footer>
         <h1>Burlington, MA - <br className="footerBr"></br>781-221-0334 <br className="footerBr"></br>and <br className="footerBr"></br>Waltham, MA - <br className="footerBr"></br>781-899-0118</h1>

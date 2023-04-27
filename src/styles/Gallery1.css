@@ -235,6 +235,10 @@ footer{
   align-items: center;
 }
 
+.btnToG2 a{
+  color: transparent;
+}
+
 @keyframes buttonHover {
   0% {
     transform: translateY(1px);

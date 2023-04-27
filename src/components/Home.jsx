@@ -1,6 +1,7 @@
 import React from "react";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 import "../styles/Home.css";
 
@@ -143,8 +144,8 @@ function Home() {
             <img src={four}></img>
           </div>
           <div className="galleryButtons">
-            <button className="galleryButton">Click Here For Gallery I</button>
-            <button className="galleryButton">Click Here For Gallery II</button>
+          <Link to="/GalleryI" onClick={() => window.scrollTo(0, 0)}><button className="galleryButton" href="/GalleryI">Click Here For Gallery I</button></Link>
+          <Link to="/GalleryII" onClick={() => window.scrollTo(0, 0)}><button className="galleryButton" href="/GalleryII">Click Here For Gallery II</button></Link>
           </div>
         </div>
         <div className="callToAction">
